@@ -9,10 +9,10 @@ module.exports = () => {
           if (el.matches('div.sub-section')) break
           el = el.parentElement
         }
-        const otherEl = document.querySelector(`[data-name="${el.dataset.name}"].hidden`)
+        const otherEl = document.querySelector(`[data-name="${el.dataset.name}"].d-none`)
         if (otherEl) {
-          otherEl.classList.remove('hidden')
-          el.classList.add('hidden')
+          otherEl.classList.remove('d-none')
+          el.classList.add('d-none')
         }
       }
     })
